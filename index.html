@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essence Élégante | Premium Perfume Boutique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #333333;
+        }
+        l̥ō
+        .nav-container {
+            background-color: #ffffff;
+            padding: 0 0 45px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+        
+        .main-nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .main-nav > ul {
+            list-style: none;
+            padding: 30px 0 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .main-nav > ul > li {
+            position: relative;
+        }
+        
+        .main-nav button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .main-nav button:hover {
+            background-color: rgba(173, 131, 131, 0.1);
+        }
+        
+        .main-nav a {
+            color: #54014d;  /* Dark blue color */
+            font-weight: bold;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(185, 206, 159, 0.1);
+            border-radius: 4px;
+            z-index: 1000;
+            padding: 10px 0;
+            top: 100%;
+            left: 0;
+        }
+        
+        .main-nav > ul > li:hover .submenu {
+            display: block;
+        }
+        
+        .submenu li {
+            padding: 8px 15px;
+        }
+        
+        .submenu a {
+            color: #ffffff;
+            display: block;
+            padding: 5px 0;
+        }
+        
+        .submenu a:hover {
+            color: #0053ba;
+        }
+        
+        /* Products showcase styles */
+        .products-showcase {
+            padding: 60px 0;
+            background-color: #f8f8f8;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            margin: 20px 0;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            padding: 20px 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #333;
+            border: 1px solid #e0e0e0;
+            margin: 15px;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .product-card a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .product-card img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        
+        .product-card h3 {
+            margin: 10px 0 5px;
+            font-size: 1.2rem;
+        }
+        
+        .product-card .price {
+            color: #4a9eff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin: 10px 0 0;
+        }
+        
+        .features {
+            padding: 60px 0;
+            background-color: #fff;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+        
+        .notes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+            color: #e0e0e0;
+        }
+        
+        .notes h3 {
+            color: #4a9eff;
+        }
+        
+        footer {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-top: 1px solid #333;
+        }
+        
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .product-card img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .view-all-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #4a9eff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .view-all-btn:hover {
+            background-color: #3a8aee;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="main-nav">
+            <ul>
+                <li><button><a href="#home">HOME</a></button></li>
+                <li>
+                    <button><a href="#shop">SHOP</a></button>
+                    <ul class="submenu">
+                        <li><a href="ace.html">Ace</a></li>
+                        <li><a href="eeta.html">Eeta</a></li>
+                        <li><a href="park-avenger.html">Park Avenger</a></li>
+                        <li><a href="Second Love.html">Second Love</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button><a href="#flavours">FLAVOURS</a></button>
+                    <ul class="submenu">
+                        <li><button><a href="#lavender">Lavender</a></button></li>
+                        <li><button><a href="#sandal">Sandal</a></button></li>
+                        <li><button><a href="#rose">Rose</a></button></li>
+                        <li><button><a href="#jasmine">Jasmine</a></button></li>
+                    </ul>
+                </li>
+                <li>
+                    <button><a href="#export">EXPORT</a></button>
+                    <ul class="submenu">
+                        <li><button><a href="#derma">Derma</a></button></li>
+                        <li><button><a href="#luviya">Luviya</a></button></li>
+                        <li><button><a href="#texas">Texas</a></button></li>
+                        <li><button><a href="#timeless">Timeless</a></button></li>
+                    </ul>
+                </li>
+                <li><button><a href="#about">ABOUT US</a></button></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <header style="text-align: center; padding: 20px 0; background-color: #ffffff;">
+        <h1 style="color: #000000; font-family: 'Playfair Display', serif; font-size: 3.5em; margin: 0; text-transform: uppercase; letter-spacing: 2px;">The Scented Boutique</h1>
+    </header>
+    <main style="margin-top: 20px;">
+        <section class="products-showcase">
+            <div class="container">
+                <h2 style="text-align: center; color: #000000; font-size: 1.8em; margin-top: 0;">Our Collection</h2>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <a href="ace.html">
+                            <img src="images/ace.jpg" alt="Ace Perfume">
+                            <h3>Ace</h3>
+                            <p class="price">$200</p>
+                            <a href="#" class="buy-now"><button>Buy Now</button></a>
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="eeta.html">
+                            <img src="images/eva.jpg" alt="Eeta Perfume">
+                            <h3>Eeta</h3>
+                            <p class="price">$87</p>
+                            <a href="#" class="buy-now"><button>Buy Now</button></a>
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="park-avenger.html">
+                            <img src="images/park avenue.jpeg" alt="Park Avenger Perfume">
+                            <h3>Park Avenger</h3>
+                            <p class="price">$168</p>
+                            <a><button>Buy Now</button></a>
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="Second Love.html">
+                            <img src="images/second love.jpg" alt="Second Love Perfume">
+                            <h3>Second Love</h3>
+                            <p class="price">$180</p>
+                            <a href="#" class="buy-now"><button>Buy Now</button></a>
+                        </a>
+                    </div>
+                </div>
+                <div class="view-all-container" style="text-align: center; margin-top: 30px;">
+                    <a href="products.html" class="view-all-btn">View All Products</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Fragrance Profile</h2>
+                <div class="notes">
+                    <div>
+                        <h3>Top Notes</h3>
+                        <p>Bergamot, Pink Pepper, Mint</p>
+                    </div>
+                    <div>
+                        <h3>Heart Notes</h3>
+                        <p>Jasmine, Lavender, Black Orchid</p>
+                    </div>
+                    <div>
+                        <h3>Base Notes</h3>
+                        <p>Tobacco Leaf, Vetiver, Amberwood</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ace. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

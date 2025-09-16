@@ -1,0 +1,186 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: #fafafa;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.product-img {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('axe-vortex.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: 4rem;
+  color: #fff;
+  margin: 0;
+}
+.hero .tagline {
+  font-size: 1.5rem;
+  color: #ddd;
+  margin: 10px 0 20px;
+}
+.hero .btn {
+  display: inline-block;
+  background: #f04e30;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+.hero .btn:hover {
+  background: #c43e25;
+}
+
+/* Global Button Styling */
+button {
+  background: #0053ba;
+  color: #fff;
+  border: black;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Main Navigation */
+.main-nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+}
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.main-nav li {
+  margin-bottom: 10px;
+  position: relative; /* enable absolute submenu positioning */
+}
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.main-nav a:hover {
+  color: #f04e30;
+}
+
+/* Submenu Styles */
+.main-nav .submenu {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: rgba(0,0,0,0.8);
+  border-radius: 4px;
+  min-width: 120px;
+  z-index: 3;
+}
+.main-nav li:hover > .submenu {
+  display: block;
+}
+.main-nav .submenu li {
+  margin-bottom: 8px;
+}
+.main-nav .submenu a {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+.main-nav .submenu a:hover {
+  color: #f04e30;
+}
+
+/* Features Section */
+.features {
+  padding: 60px 0;
+  background: #fff;
+}
+.features h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+.notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.notes > div {
+  flex: 1 1 30%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.notes h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+.notes p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Specific smaller preview image */
+.preview-img {
+  width: 25%;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .notes {
+    flex-direction: column;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
