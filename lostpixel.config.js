@@ -1,8 +1,8 @@
 module.exports = {
       pageShots: {
       pages: [ { path: '/', name: 'landing' } ],
-      baseUrl: 'http://127.0.0.1:5500/index.html#',
+      baseUrl: 'http://172.17.0.1:3000',
     },
-      lostPixelProjectId: 'cmfm3yb5t0pxm3rwpl73ahw4i',
+      lostPixelProjectId: 'cmggnoarb0vf414tr5tr61h4q',
       apiKey: process.env.LOST_PIXEL_API_KEY,
     };
